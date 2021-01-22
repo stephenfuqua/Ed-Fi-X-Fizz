@@ -30,8 +30,8 @@ def _validate_columns(expected: set, df: pd.DataFrame, file_type: str) -> List[s
     missing = expected.difference(actual)
 
     # introduce a temporary type check error
-    extra_msg: int = str(extra) if len(extra) > 0 else "{none}"
-    missing_msg = str(missing) if len(missing) > 0 else "{none}"
+    extra_msg = str(extra) if len(extra) > 0 else "{none}"
+    missing_msg=str(missing) if len(missing) > 0 else "{none}"
 
     return [
         f"{file_type} file contains extra columns {extra_msg} and is missing columns {missing_msg}"
