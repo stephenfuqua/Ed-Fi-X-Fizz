@@ -130,8 +130,6 @@ def describe_when_validating_users_file():
                 "LastModifiedDate",
                 "SourceCreateDate",
                 "SourceLastModifiedDate",
-                # deliberately, temporarily, breaking this to test reporting in GitHub actions
-                # "Does not belong here",
             ]
             data = [
                 [
@@ -146,7 +144,6 @@ def describe_when_validating_users_file():
                     "9876-12-17 14:15:16",
                     "9876-12-18 13:14:15",
                     "9876-12-19 10:11:12",
-                    #"does not belong here",
                 ]
             ]
             df = pd.DataFrame(columns=columns, data=data)

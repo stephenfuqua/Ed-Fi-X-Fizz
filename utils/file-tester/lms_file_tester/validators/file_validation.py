@@ -29,7 +29,8 @@ def _validate_columns(expected: set, df: pd.DataFrame, file_type: str) -> List[s
     extra = actual.difference(expected)
     missing = expected.difference(actual)
 
-    extra_msg = str(extra) if len(extra) > 0 else "{none}"
+    # introduce a temporary type check error
+    extra_msg: int = str(extra) if len(extra) > 0 else "{none}"
     missing_msg = str(missing) if len(missing) > 0 else "{none}"
 
     return [
